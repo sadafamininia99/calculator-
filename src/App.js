@@ -1,25 +1,25 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css'
 
 const App = () => {
 
   const [result, setResult] = useState('')
 
-  const handleCLick = (e)=>{
+  const handleCLick = (e) => {
     setResult(result.concat(e.target.name));
     console.log(result.concat(e.target.name))
   }
-  const clear=()=>{
+  const clear = () => {
     setResult('')
   }
-  const deleteScreen=()=>{
+  const deleteScreen = () => {
     setResult(result.slice(0, - 1))
   }
-  const calculate=()=>{
-    try{
+  const calculate = () => {
+    try {
       setResult(eval(result).toString())
-    }catch(err){
-      setResult('syntax error')
+    } catch (err) {
+      setResult('syntax errrrrrrrrrrror')
     }
   }
   return (
